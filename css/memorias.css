@@ -1,0 +1,57 @@
+/* Memorias Grid */
+.memorias-grid {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.memorias-grid.revealed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+.memoria-item {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.memoria-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.memoria-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.memoria-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.memoria-text {
+    padding: 1.5rem;
+}
+
+.memoria-text h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.memoria-text p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
