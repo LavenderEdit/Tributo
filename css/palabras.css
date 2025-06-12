@@ -1,0 +1,61 @@
+/* Palabras Container */
+.palabras-container {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.palabras-container.revealed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+.palabra-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.palabra-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.palabra-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    border-left: 4px solid var(--secondary-color);
+    transition: var(--transition);
+}
+
+.palabra-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.palabra-card i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.palabra-card p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-style: italic;
+    color: var(--text-color);
+}
+
+.autor {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
