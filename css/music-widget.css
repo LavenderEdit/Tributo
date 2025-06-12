@@ -1,0 +1,52 @@
+/* Music Widget */
+#music-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1001;
+}
+
+/* Botón flotante */
+#music-float-btn {
+    background: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+#music-float-btn:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Popup de volumen oculto por defecto */
+.volume-control-popup {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    background: var(--white);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+/* Al hacer hover sobre todo #music-widget, mostramos el popup */
+#music-widget:hover .volume-control-popup {
+    opacity: 1;
+    visibility: visible;
+}
+
+.volume-control-popup input {
+    width: 120px;
+}
