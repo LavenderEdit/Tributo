@@ -9,7 +9,6 @@ const revealMemoriasBtn = document.getElementById("reveal-memorias")
 const revealPalabrasBtn = document.getElementById("reveal-palabras")
 const memoriasContent = document.getElementById("memorias-content")
 const palabrasContent = document.getElementById("palabras-content")
-
 const musicFloatBtn = document.getElementById("music-float-btn");
 const volumeSlider = document.getElementById("volume-slider");
 const backgroundMusic = document.getElementById("background-music");
