@@ -1,0 +1,102 @@
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: var(--primary-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .quote-bubble {
+        position: static;
+        transform: none;
+        margin: 2rem;
+        max-width: none;
+    }
+
+    .hero-content {
+        position: static;
+        text-align: center;
+        padding: 2rem;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .memorias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .palabras-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .carousel-indicators {
+        bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .quote-bubble {
+        padding: 1.5rem;
+    }
+
+    .quote-bubble p {
+        font-size: 1rem;
+    }
+
+    .palabra-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Touch gestures for mobile carousel */
+@media (max-width: 768px) {
+    .carousel-container {
+        touch-action: pan-y;
+    }
+}
